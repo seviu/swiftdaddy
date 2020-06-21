@@ -1,0 +1,38 @@
+name: PublishBlog
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'manual trigger yes'  
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+  
+    - name: Generate blog
+      run: swift run Swiftdaddy
+    - name: Publish in github pages repo
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        repo: seviu/seviu.github.io
+        target_branch: master
+        keep_history: true
+        allow_empty_commit: false
+        build_dir: Output
+        committer_name: yourname 
+        commit_message: Update blog content
+      env:
+        GH_PAT: ${{ secrets.REPO_TOKEN }}
+        
+    - name: Add & Commit changes
+      uses: EndBug/add-and-commit@v4
+      with:
+        author_name: yourname
+        message: Commit new output

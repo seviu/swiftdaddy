@@ -1,0 +1,9 @@
+/.swiftpm
+.DS_Store
+/build
+/Output
+/.build
+/.publish
+/.swiftpm
+/*.xcodeproj
+.publish%       
