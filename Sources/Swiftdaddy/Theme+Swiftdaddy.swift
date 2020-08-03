@@ -65,26 +65,26 @@ private struct SwiftdaddyHTMLFactory<Site: Website>: HTMLFactory {
                     )
                 ),
                 
-                //                // Notes
-                //                .div(
-                //                    .class("wrapper content clearfix"),
-                //                    .div(
-                //                        .class("section-header float-container"),
-                //                        .a(
-                //                            .href("/notes"),
-                //                            .h1("📒 Latest notes")
-                //                        )
-                //                    ),
-                //                    .itemList(
-                //                        for: Array(context.allItems(sortedBy: \.date, order: .descending).filter { $0.sectionID.rawValue == "notes" }.prefix(3)),
-                //                        on: context.site
-                //                    ),
-                //                    .a(
-                //                        .class("browse-all"),
-                //                        .href("/notes"),
-                //                        .text("Browse all \(context.allItems(sortedBy: \.date, order: .descending).filter { $0.sectionID.rawValue == "notes" }.count) notes")
-                //                    )
-                //                ),
+                // Notes
+                .div(
+                    .class("wrapper content clearfix"),
+                    .div(
+                        .class("section-header float-container"),
+                        .a(
+                            .href("/notes"),
+                            .h1("📒 Latest notes")
+                        )
+                    ),
+                    .itemList(
+                        for: Array(context.allItems(sortedBy: \.date, order: .descending).filter { $0.sectionID.rawValue == "notes" }.prefix(3)),
+                        on: context.site
+                    ),
+                    .a(
+                        .class("browse-all"),
+                        .href("/notes"),
+                        .text("Browse all \(context.allItems(sortedBy: \.date, order: .descending).filter { $0.sectionID.rawValue == "notes" }.count) notes")
+                    )
+                ),
                 
                 .br(),
                 .br(),
@@ -121,7 +121,13 @@ private struct SwiftdaddyHTMLFactory<Site: Website>: HTMLFactory {
                     .if(section.id.rawValue == "articles",
                         .div(
                             .class("introduction"),
-                            .text("Here I will explore iOS Development from UIKit to SwiftUI through Swift programming topics")
+                            .text("iOS Development from UIKit to SwiftUI through Swift programming topics")
+                        )
+                    ),
+                    .if(section.id.rawValue == "notes",
+                        .div(
+                            .class("introduction"),
+                            .text("Snippets, tips and tricks, small pieces of code")
                         )
                     ),
                     .taggedIemList(for: section.items.filter { $0.sectionID == section.id }, on: context.site)

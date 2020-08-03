@@ -7,6 +7,7 @@ import SplashPublishPlugin
 struct Swiftdaddy: Website {
 	enum SectionID: String, WebsiteSectionID {
 		case articles
+        case notes
 	}
 	
 	struct ItemMetadata: WebsiteItemMetadata {
@@ -84,7 +85,7 @@ try Swiftdaddy().publish(
 		.addMarkdownFiles(),
 		.generateHTML(withTheme: .SwiftdaddyTheme, indentation: .tabs(1)),
 		.stringReplace(colorsReplacement),
-		.generateRSSFeed(including: [.articles]),
+        .generateRSSFeed(including: [.articles, .notes]),
 		.generateSiteMap(),
 		.deploy(using: .gitHub("seviu/seviu.github.io", useSSH: true))
 	]
