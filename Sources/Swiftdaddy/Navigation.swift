@@ -26,6 +26,11 @@ let navigation = Navigation(
             iconPath: "/social/linkedin.svg",
             caption: "Profile",
             destinationURL: URL(string: "https://www.linkedin.com/in/seviu/")!
+        ),
+        .init(
+            iconPath: "/social/email.svg",
+            caption: "Email",
+            destinationURL: URL(string: "mailto:vieira+blog@gmail.com")!
         )
 //		,
 //        .init(

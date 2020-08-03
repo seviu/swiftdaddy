@@ -16,8 +16,8 @@ struct Swiftdaddy: Website {
 	
 	// Update these properties to configure your website:
 	var url = URL(string: "https://seviu.github.io/")!
-	var name = "Swift Blog by Sebastian Vieira"
-	var description = "Blog about the Swift programming language"
+	var name = "Swiftdaddy"
+	var description = "Blog about App development for iOS"
 	var language: Language { .english }
 	var imagePath: Path? { nil }
 	/// All dates use the same time zone and locale

@@ -1,3 +1,15 @@
-## Welcome to my Swift blog
+## Welcome to my App development blog
 
-## My name is **[Sebastian Vieira](https://twitter.com/seviu)** and I develop mobile apps for iOS and Android
+
+### My name is **[Sebastian Vieira](https://twitter.com/seviu)**
+
+
+I love to develop mobile apps.
+
+I have been developing them since 2003 that I started with Nokia's Symbian OS and J2ME. That quickly changed in 2008 that the App Store was introduced and changed everything.
+
+I try to combine my passion for the Swift programming language and being a father. This is how Swiftdaddy was born. 
+
+I live in Switzerland where I work as an iOS developer for an awesome company [homegate.ch](https://homegate.ch). I have also had the privilege to work for Swisscom at [local.ch](https://local.h) and a few Swiss Startups.
+
+Finally, I am with my friend and awesome developer [Vikram Kriplaney](https://markiv.github.io), founder of [iPhonso GmbH](https://iphonso.com), a Swiss app development company.
