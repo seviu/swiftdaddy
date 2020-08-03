@@ -7,3 +7,4 @@
 /.swiftpm
 /*.xcodeproj
 .publish%       
+UserInterfaceState.xcuserstate
