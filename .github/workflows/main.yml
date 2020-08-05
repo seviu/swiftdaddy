@@ -26,7 +26,7 @@ jobs:
         keep_history: true
         allow_empty_commit: false
         build_dir: Output
-        committer_name: yourname 
+        committer_name: Sebastian Vieira 
         commit_message: Update blog content
       env:
         GH_PAT: ${{ secrets.REPO_TOKEN }}
@@ -34,5 +34,5 @@ jobs:
     - name: Add & Commit changes
       uses: EndBug/add-and-commit@v4
       with:
-        author_name: yourname
+        author_name: Sebastian Vieira
         message: Commit new output

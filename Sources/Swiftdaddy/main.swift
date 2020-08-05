@@ -23,7 +23,7 @@ struct Swiftdaddy: Website {
 	/// All dates use the same time zone and locale
 	static func dateFormatter(with format: String) -> DateFormatter {
 		let formatter = DateFormatter()
-		formatter.timeZone = TimeZone(identifier: "Europe/Berlin")
+		formatter.timeZone = TimeZone(identifier: "Europe/Madrid")
 		formatter.locale = Locale(identifier: "en-US")
 		formatter.dateFormat = format
 		return formatter
@@ -37,12 +37,15 @@ struct Swiftdaddy: Website {
 }
 
 
+// remember to add new colors to styles.css (including dark mode)
 let colorsReplacement = StringReplace(
 	replacements: [
 		(source: "website-background-color",         target: "#ffffff"),
 		(source: "website-content-background-color", target: "#ececeb"),
-		(source: "website-text-color",               target: "#000000"),
-		(source: "header-color",                     target: "#2193be"),
+        (source: "website-text-color",               target: "#000000"),
+        (source: "website-link-text-color",          target: "#050505"),
+        (source: "website-link-text-hover-color",    target: "#2183be"),
+        (source: "header-color",                     target: "#2193be"),
 		(source: "navigation-items-color",           target: "#103140"),
 		(source: "navigation-items-text-color",      target: "#ffffff"),
 		(source: "hover-color",                      target: "#e4eaf5"),
@@ -55,6 +58,8 @@ let colorsReplacement = StringReplace(
 		(source: "website-background-color-dark",         target: "#222222"),
 		(source: "website-content-background-color-dark", target: "#101010"),
 		(source: "website-text-color-dark",               target: "#eeeeee"),
+        (source: "website-link-text-color-dark",          target: "#dfdfdf"),
+        (source: "website-link-text-hover-color-dark",    target: "#504c52"),
 		(source: "header-color-dark",                     target: "#503c52"),
 		(source: "navigation-items-color-dark",           target: "#008A90"),
 		(source: "navigation-items-text-color-dark",      target: "#eeeeee"),

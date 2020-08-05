@@ -36,4 +36,4 @@ On `willFinishLaunchingWithOptions`just query for this argument and if it is a X
 #endif
 ```
 
-> Tip: If you have problems with legacy code and table/collection views, try to reloadData:
+> Tip: If you have problems with legacy code and table/collection views, try to reloadData

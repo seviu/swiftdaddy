@@ -1,12 +1,10 @@
 ## Welcome to my App development blog
-
+&nbsp;
 
 ### My name is **[Sebastian Vieira](https://twitter.com/seviu)**
+&nbsp;
 
-
-I love to develop mobile apps.
-
-I have been developing them since 2003 that I started with Nokia's Symbian OS and J2ME. That quickly changed in 2008 that the App Store was introduced and changed everything.
+I have been developing mobile apps since 2003 that I started with Nokia's Symbian OS and J2ME. That quickly changed in 2008 that the App Store was introduced and changed everything.
 
 I try to combine my passion for the Swift programming language and being a father. This is how Swiftdaddy was born. 
 

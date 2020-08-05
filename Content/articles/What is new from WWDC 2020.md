@@ -21,12 +21,16 @@ Lambda.run {
 Having experience in AWS I cannot stress how happy I am that I can now add Swift to the set of programming languages I can use. Bye, bye typescript.
 
 ### Enum Improvements
+&nbsp;
 
 **Synthesized Comparable Conformance For enum Types**
 
+
 From Swift 5.3 Comparable will also be included, allowing for easy sorting by the order of declaration. 
-	
+
+
 **Enum Cases As Protocol Witnesses**
+
 
 We can now allow for static protocol requirements to be witnessed by an enum case. In other words: it is possible to conform enum for a protocol and fulfill `static var` and `static func` protocol requirements.
 	
@@ -88,15 +92,15 @@ extension Stack {
 
 ### and more...
 
-- better diagnostic compiler errors and hence better debugging
-- improved and faster code completion
-- improved auto-indentation
-- improved handling of chained method calls and property accesses
-- A standardized way to delegate a program’s entry point with the @main attribute
+- Better diagnostic compiler errors and hence better debugging
+- Improved and faster code completion
+- Improved auto-indentation
+- Improved handling of chained method calls and property accesses
+- Standardized way to delegate a program’s entry point with the @main attribute
 - Swift Numerics, for numerical computation in Swift 
-- apple/swift-numerics: Numerical APIs for Swift
+- Apple/swift-numerics: Numerical APIs for Swift
 - Swift Argument Parser, build your command-line tools with Swift
-- where clauses on contextually generic declarations
+- Introducing where clauses on contextually generic declarations
 - Multi-Pattern catch clauses
 - Float16
 
@@ -116,8 +120,8 @@ extension Stack {
 MetricKit is a unique and irreplaceable tool if you care about your app performance under real circumstances in the production environment.
 
 It can aggregate and analyze per-device reports on:
-- exception and crash diagnostics
-- power and performance metrics.
+- Exception and crash diagnostics
+- Power and performance metrics.
 - Tracks specific app failures, such as crashes or disk-write exceptions
 
 ## UIKit

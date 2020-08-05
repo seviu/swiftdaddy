@@ -153,7 +153,7 @@ private struct SwiftdaddyHTMLFactory<Site: Website>: HTMLFactory {
                         ),
                         .br(),
                         .br(),
-                        .p(.text("Published on \(item.date)")),
+                        .p(.text("Published on \(Swiftdaddy.textualDateFormatter.string(from: item.date))")),
                         .span("Tagged with: "),
                         .tagList(for: item, on: context.site)
                     )
@@ -336,7 +336,7 @@ private extension Node where Context == HTML.BodyContext {
     static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
         return .ul(
             .class("item-list"),
-            .forEach(items) { item in
+            .forEach(items.sorted(by: {$0.date.compare($1.date) == .orderedDescending})) { item in
                 .li(.article(
                     .a(.href(item.path),
                        .h1(.text(item.title)),
@@ -350,7 +350,7 @@ private extension Node where Context == HTML.BodyContext {
     static func taggedIemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
         return .ul(
             .class("item-list"),
-            .forEach(items) { item in
+            .forEach(items.sorted(by: {$0.date.compare($1.date) == .orderedDescending})) { item in
                 .li(.article(
                     .h1(.a(
                         .href(item.path),
@@ -358,7 +358,8 @@ private extension Node where Context == HTML.BodyContext {
                         )),
                     .tagList(for: item, on: site),
                     .p(.text(item.description)),
-                    .text("Published on \(item.date)")
+                    .br(),
+                    .text("Published on \(Swiftdaddy.textualDateFormatter.string(from: item.date))")
                     ))
             }
         )
