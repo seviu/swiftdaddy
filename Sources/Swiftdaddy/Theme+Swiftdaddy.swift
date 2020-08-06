@@ -506,6 +506,7 @@ private extension Node where Context == HTML.BodyContext {
                 .text("©2020 Sebastian Vieira")
             ),
             .p(
+                .text("Subscribe via "),
                 .a(.class("rss"), .text("RSS"), .href("/feed.rss"))
             )
         )
