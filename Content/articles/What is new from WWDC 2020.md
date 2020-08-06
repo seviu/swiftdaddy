@@ -1,10 +1,10 @@
 ---
 date: 2020-08-03 09:41
-description: WWDC 2020 brought us SwiftUI improvements, Swift 5.3, new Collection View APIs and much more...
+description: WWDC 2020 brought us SwiftUI improvements, Swift 5.3, new Collection View APIs, and much more...
 tags: wwdc, swift, swiftui
 ---
 
-WWDC brought us a lot of new things. This summarises some of the things they announced.
+WWDC brought us a lot of new things. I am still struggling to have time to watch all the sessions which were made available. This article tries to summarize some of the things they announced.
 
 ## Swift 5.3
 
@@ -96,10 +96,10 @@ extension Stack {
 - Improved and faster code completion
 - Improved auto-indentation
 - Improved handling of chained method calls and property accesses
-- Standardized way to delegate a program’s entry point with the @main attribute
+- A standardized way to delegate a program’s entry point with the @main attribute
 - Swift Numerics, for numerical computation in Swift 
 - Apple/swift-numerics: Numerical APIs for Swift
-- Swift Argument Parser, build your command-line tools with Swift
+- Swift Argument Parser for building command-line tools
 - Introducing where clauses on contextually generic declarations
 - Multi-Pattern catch clauses
 - Float16
@@ -128,21 +128,21 @@ It can aggregate and analyze per-device reports on:
 
 Brand new UIColorPickerViewController
 
-Major improvements in connection views:
+Major improvements for Collection Views:
 
-- UICollectionView.CellRegistration
+- UICollectionView.CellRegistration as an improved way to register and use Collection View cells.
 - Lists as new CompositionalLayouts (similar to table views)
 - Diffable Data Source now includes Section Snapshots
-- Configuration API encapsulates the cell’s content and background view properties.
-- Customizations (swipe, accessories) on the cell configuration
+- Configuration API encapsulates the content and background view properties of our Cells.
+- Customizations such as swipe and accessories which were previously only present for Table Views
 
-UIMenu improvements:
+&nbsp;
 
-- UIDeferredMenuElement to asynchronously build a UIMenu
+UIMenu improvements with UIDeferredMenuElement let us asynchronously build menus
 
-> UIMenu was introduced with iOS13… Time to start using it!
-	
-- PHPickerViewController for photos
+*UIMenu was introduced with iOS13… Time to start using it!*
+
+ PHPickerViewController for photos that deserve its section. This class gives us a dedicated controller for photos with multi-selection, a consistent modern UI, and **no permissions** required. I cannot wait to start using it.
 
 ## SwiftUI
 
@@ -219,7 +219,7 @@ ScrollView {
 }
 ```
 
-[Playground](https://github.com/seviu/swiftdaddy/tree/master/Playgrounds/ScrollView.playground)
+Here a link to a [Playground](https://github.com/seviu/swiftdaddy/tree/master/Playgrounds/ScrollView.playground)
 
 But there is more... We now have Grids! With LazyVGrid and LazyHGrid!
 
@@ -323,13 +323,14 @@ Better Face Tracking now supporting both cameras front and back with up to three
 
 ## And more...
 
-Nearby interactions
+Nearby interactions:
 
-- U1 Chip specific - iPhone 11
-- Measure distances and discovering peers with MultipeerConnectivity
+- Using the U1 Chip available from iPhone 11
+- It lets us measure distances and discovering peers with MultipeerConnectivity
 
+&nbsp;
 
-Local Push Connectivity (very limited use case for cruise ships and places where there is no internet)
+Local Push Connectivity. It has a very limited use case only intended for places like cruise ships where there is no access to APNs.
 
 Binary frameworks distribution with Swift package manager
 
@@ -338,11 +339,3 @@ Vision API to analyze motion and video
 PencilKit with handwriting recognition
 
 And of course Big Sur with Apple Silicon!
-
-
-
-
-
-		
-
-

@@ -165,5 +165,5 @@ print("map \(mapMeaningoflife) or flat \(flatMapMeaningoflife)")
 
 ## Playground
 
-[Optional Playground](https://github.com/seviu/swiftdaddy/tree/master/Playgrounds/Optional.playground)
+Link to a [Optional Playground](https://github.com/seviu/swiftdaddy/tree/master/Playgrounds/Optional.playground)
 
