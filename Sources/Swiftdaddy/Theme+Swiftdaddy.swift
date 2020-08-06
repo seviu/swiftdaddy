@@ -498,6 +498,7 @@ private extension Node where Context == HTML.BodyContext {
                 ),
                 .text(" by "),
                 .a(
+                    .class("rss"),
                     .text("John Sundell"),
                     .href("https://www.swiftbysundell.com")
                 )
