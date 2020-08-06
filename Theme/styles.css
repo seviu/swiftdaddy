@@ -21,18 +21,18 @@
 }
 
 :root {
-	--section-hover-color: ${section-hover-color};
-	--section-color: ${section-color};
-    --website-background-color: ${website-background-color};
-    --website-content-background-color: ${website-content-background-color};
-    --website-text-color: ${website-text-color};
-    --header-color: ${header-color};
-    --navigation-items-color: ${navigation-items-color};
-    --navigation-items-text-color: ${navigation-items-text-color};
-    --hover-color: ${hover-color};
-    --video-background-color: ${video-color};
-    --website-link-text-color: ${website-link-text-color};
-    --website-link-text-hover-color: ${website-link-text-hover-color};
+    --hover-color: #e4eaf5;
+    --section-hover-color: #ececeb;
+    --section-color: #efefef;
+    --website-background-color: #ffffff;
+    --website-content-background-color: #ececeb;
+    --website-text-color: #000000;
+    --website-link-text-color: #050505;
+    --website-link-text-hover-color: #2183be;
+    --header-color: #2193be;
+    --navigation-items-color: #103140;
+    --navigation-items-text-color: #ffffff;
+    --video-color: #ffffff;
 }
 .logo {
 	content: url(/images/swiftdaddy.png);
@@ -46,18 +46,18 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-		--section-hover-color: ${section-hover-color-dark};
-		--section-color: ${section-color-dark};
-        --website-background-color: ${website-background-color-dark};
-        --website-content-background-color: ${website-content-background-color-dark};
-        --website-text-color: ${website-text-color-dark};
-        --header-color: ${header-color-dark};
-        --navigation-items-color: ${navigation-items-color-dark};
-        --navigation-items-text-color: ${navigation-items-text-color-dark};
-        --hover-color: ${hover-color-dark};
-        --video-background-color: ${video-color-dark};
-        --website-link-text-color: ${website-link-text-color-dark};
-        --website-link-text-hover-color: ${website-link-text-hover-color-dark};
+        --hover-color: #6e5773;
+        --section-color: #101010;
+        --section-hover-color: #010101;
+        --website-background-color: #222222;
+        --website-content-background-color: #101010;
+        --website-text-color: #eeeeee;
+        --website-link-text-color: #dfdfdf;
+        --website-link-text-hover-color: #504c52;
+        --header-color: #503c52;
+        --navigation-items-color: #008A90;
+        --navigation-items-text-color: #eeeeee;
+        --video-color: #ffffff;
     }
 }
 

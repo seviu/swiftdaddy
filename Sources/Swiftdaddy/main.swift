@@ -36,47 +36,6 @@ struct Swiftdaddy: Website {
 	static var textualDateFormatter = dateFormatter(with: "MMMM d, yyyy")
 }
 
-
-// remember to add new colors to styles.css (including dark mode)
-let colorsReplacement = StringReplace(
-	replacements: [
-		(source: "website-background-color",         target: "#ffffff"),
-		(source: "website-content-background-color", target: "#ececeb"),
-        (source: "website-text-color",               target: "#000000"),
-        (source: "website-link-text-color",          target: "#050505"),
-        (source: "website-link-text-hover-color",    target: "#2183be"),
-        (source: "header-color",                     target: "#2193be"),
-		(source: "navigation-items-color",           target: "#103140"),
-		(source: "navigation-items-text-color",      target: "#ffffff"),
-		(source: "hover-color",                      target: "#e4eaf5"),
-		(source: "section-color",   				 target: "#efefef"),
-		(source: "section-hover-color",				 target: "#ececeb"),
-		(source: "video-color",                      target: "#ffffff"),
-		
-		// ++++++ DARK MODE
-		
-		(source: "website-background-color-dark",         target: "#222222"),
-		(source: "website-content-background-color-dark", target: "#101010"),
-		(source: "website-text-color-dark",               target: "#eeeeee"),
-        (source: "website-link-text-color-dark",          target: "#dfdfdf"),
-        (source: "website-link-text-hover-color-dark",    target: "#504c52"),
-		(source: "header-color-dark",                     target: "#503c52"),
-		(source: "navigation-items-color-dark",           target: "#008A90"),
-		(source: "navigation-items-text-color-dark",      target: "#eeeeee"),
-		(source: "hover-color-dark",                      target: "#6e5773"),
-		(source: "section-color-dark",   				  target: "#101010"),
-		(source: "section-hover-color-dark",			  target: "#010101"),
-		(source: "video-color-dark",                      target: "#ffffff"),
-	],
-	filePaths: [
-		"styles.css",
-		"social/github.svg",
-		"social/twitter.svg",
-		"social/CV.svg",
-		"social/linkedin.svg",
-	]
-)
-
 extension Theme where Site == Swiftdaddy {
 	static var SwiftdaddyTheme: Self {
 		.swiftdaddyTheme(using: navigation, with: projects)
@@ -89,7 +48,6 @@ try Swiftdaddy().publish(
 		.copyResources(),
 		.addMarkdownFiles(),
 		.generateHTML(withTheme: .SwiftdaddyTheme, indentation: .tabs(1)),
-		.stringReplace(colorsReplacement),
         .generateRSSFeed(including: [.articles, .notes]),
 		.generateSiteMap(),
 		.deploy(using: .gitHub("seviu/seviu.github.io", useSSH: true))
