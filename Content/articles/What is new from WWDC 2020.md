@@ -32,7 +32,7 @@ From Swift 5.3 Comparable will also be included, allowing for easy sorting by th
 **Enum Cases As Protocol Witnesses**
 
 
-We can now allow for static protocol requirements to be witnessed by an enum case. In other words: it is possible to conform enum for a protocol and fulfill `static var` and `static func` protocol requirements.
+We can now allow for static protocol requirements to be witnessed by an enum case. In other words: it is possible to conform enum for a protocols so that it fulfills `static var` and `static func` protocol requirements.
 	
 ```swift
 	protocol ErrorReportable {
