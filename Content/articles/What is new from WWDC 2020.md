@@ -35,7 +35,7 @@ From Swift 5.3 Comparable will also be included, allowing for easy sorting by th
 We can now allow for static protocol requirements to be witnessed by an enum case. In other words: it is possible to conform enum for a protocols so that it fulfills `static var` and `static func` protocol requirements.
 	
 ```swift
-	protocol ErrorReportable {
+protocol ErrorReportable {
     static var notFound: Self { get }
     static func invalid(searchTerm: String) -> Self
 }
@@ -46,7 +46,28 @@ enum UserError: ErrorReportable {
 }
 ```
 
+Before all this, because enum cases are not considered as a "witness" for static protocol requirement, we had to write implementations such as:
+
+```swift
+enum UserrError: ErrorReportable {
+  case _notFound
+  case _invalid(searchTerm: String) -> Self
+  static var notFound: Self { return ._notFound }
+  static func invalid(searchTerm: String) -> Self {
+    return ._invalid(searchTerm: searchTerm)
+  }
+}
+```
+
+This does not really make much sense since enum cases behave like if they were *static* and matching should happen automatically.
+
+There are some limitations. It is better to read the original proposal:
+
+[Enum Cases as Protocol Witnesses](https://github.com/apple/swift-evolution/blob/master/proposals/0280-enum-cases-as-protocol-witnesses.md)
+
 ### Multiple Trailing Closures
+
+Before Swift 5.3 we could only have a trailing closure. Now it is possible to concatenate them. This makes the code simpler and easier to read.
 
 ```swift
 UIView.animate(withDuration: 0.3) { 
