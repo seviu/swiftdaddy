@@ -1,7 +1,7 @@
 ---
-date: 2020-08-30 09:41
+date: 2020-08-29 09:41
 description: Taking a look into Protocols and how we can use them with generic types in the form of Associated Types
-tags: Swift
+tags: swift
 ---
 
 ## Understanding the problem
