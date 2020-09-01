@@ -1,18 +1,18 @@
 ---
 date: 2020-08-30 09:41
-description: Protocols with Associated Types
+description: Taking a look into Protocols and how we can use them with generic types in the form of Associated Types
 tags: Swift
 ---
 
 ## Understanding the problem
 
-While working in a problem with a colleague we came upon a problem in which it was necessary to transform one element into an array of something complex and totally different. Since this was a pattern which was going to repeat itself, we defined a protocol for that.
+While working in a problem with a colleague we came upon a problem in which it was necessary to transform one element into an array of something complex and different. Since this was a pattern that was going to repeat itself, we defined a protocol for that.
 
-The problem itself required us to have a `Parser` which would transform some json into an array of core data elements. Lets name them `Element` and `ComplexElement`
+The problem itself required us to have a `Parser` which would transform some JSON into an array of core data elements. Lets name them `Element` and `ComplexElement`
 
 ## Our setup
 
-We have a Parser which transforms some `Codable` into an array of `ComplexObject`.
+We have a Parser that transforms some `Codable` into an array of `ComplexObject`.
 
 ```swift
 protocol Parser {
@@ -63,7 +63,7 @@ This still does not feel right. We really would like to specify the types of our
 
 ### associatedtype to the rescue
 
-To achieve this we can use Associated Types or `associatedtype`. An associated type is a placeholder whith a keyword which can be defined with `typealias` when implementing the protocol.
+To achieve this we can use Associated Types or `associatedtype`. An associated type is a placeholder with a keyword that can be defined with `typealias` when implementing the protocol.
 
 Associated types can have constraints. In our example we just want them to be of type `Codable` and `ComplexObject`
 
@@ -90,4 +90,4 @@ struct ElementParser: Parser {
 }
 ```
 
-And that’s it. There is not really a lot of magic around associated types. They are just placeholders we can just fill with a `typealias`.
+And that’s it. There is not a lot of magic around associated types. They are just placeholders we can just fill with a `typealias`.
