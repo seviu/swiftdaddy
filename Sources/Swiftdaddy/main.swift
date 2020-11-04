@@ -5,7 +5,7 @@ import SplashPublishPlugin
 
 
 struct Swiftdaddy: Website {
-	enum SectionID: String, WebsiteSectionID {
+	enum SectionID: String, Publish.WebsiteSectionID {
 		case articles
         case notes
 	}
@@ -15,11 +15,12 @@ struct Swiftdaddy: Website {
 	}
 	
 	// Update these properties to configure your website:
-	var url = URL(string: "https://seviu.github.io/")!
-	var name = "Swiftdaddy"
-	var description = "Blog about App development for iOS"
+	let url = URL(string: "https://seviu.github.io/")!
+    let name = "Swiftdaddy"
+    let description = "Blog about App development for iOS"
 	var language: Language { .english }
-	var imagePath: Path? { nil }
+	var imagePath: Path? { "images/swiftdaddy.png" }
+    
 	/// All dates use the same time zone and locale
 	static func dateFormatter(with format: String) -> DateFormatter {
 		let formatter = DateFormatter()
@@ -29,10 +30,6 @@ struct Swiftdaddy: Website {
 		return formatter
 	}
 	
-	/// Formats dates like `2020-02-23`. For `<time>` elements.
-	static var htmlDateFormatter = dateFormatter(with: "yyyy-dd-MM")
-	
-	/// Formats dates like `February 23, 2020`. For posts and post lists.
 	static var textualDateFormatter = dateFormatter(with: "MMMM d, yyyy")
 }
 
@@ -47,7 +44,7 @@ try Swiftdaddy().publish(
 		.installPlugin(.splash(withClassPrefix: "")),
 		.copyResources(),
 		.addMarkdownFiles(),
-		.generateHTML(withTheme: .SwiftdaddyTheme, indentation: .tabs(1)),
+		.generateHTML(withTheme: .SwiftdaddyTheme, indentation: .spaces(2)),
         .generateRSSFeed(including: [.articles, .notes]),
 		.generateSiteMap(),
 		.deploy(using: .gitHub("seviu/seviu.github.io", useSSH: true))

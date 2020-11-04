@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       tags:
-        description: 'manual trigger yes'  
+        description: 'trigger manually'
 
 jobs:
   build:

@@ -27,21 +27,6 @@ private struct SwiftdaddyHTMLFactory<Site: Website>: HTMLFactory {
             .head(for: index, on: context.site),
             .body(
                 .header(for: context, selectedSection: nil),
-                
-                //                // Projects
-                //                .div(
-                //                    .class("index page wrapper content clearfix "),
-                //                    .div(
-                //                        .class("section-header float-container"),
-                //                        .h1("👨‍💻 Projects")
-                //                    ),
-                //                    .div(
-                //                        .class("projects-ul"),
-                //                        .indexProjectList(for: projects.items, on: context.site)
-                //                    )
-                //                ),
-                
-                
                 // Articles
                 .div(
                     .class("wrapper content clearfix"),
@@ -175,31 +160,6 @@ private struct SwiftdaddyHTMLFactory<Site: Website>: HTMLFactory {
                     .footer(for: context.site)
                 )
             )
-            //            .if(page.path == "projects",
-            //                .body(
-            //                    .header(for: context, selectedSection: nil),
-            //                    .wrapper(
-            //                        .div(
-            //                            .class("projectListSpacing"),
-            //                            .projectList(for: projects.items, on: context.site)
-            //                        )
-            //                    ),
-            //                    .footer(for: context.site)
-            //                )
-            //            )
-            
-            // About section at the end
-            //            .div(
-            //                .class("wrapper contentFooter clearfix"),
-            //                .img(.class("avatar"), .src("avatar.jpg")),
-            //                .div(
-            //                    .class("introduction"),
-            //                    .contentBody(index.body)
-            //                ),
-            //                .navigationMenu(navigation)
-            //
-            //            )
-            
         )
         
         
@@ -364,105 +324,6 @@ private extension Node where Context == HTML.BodyContext {
             }
         )
     }
-    
-    //    // Projects Page
-    //
-    //    static func projectList<T: Website>(for items: [Project], on site: T) -> Node {
-    //        return .div(
-    //            .forEach(items) { item in
-    //                .div(
-    //                    .class("project-row"),
-    //                    .div(
-    //                        .class("project-column-left"),
-    //                        .div(
-    //                            .class("video"),
-    //                            .div(
-    //                                .class("video-inner"),
-    //                                .video(
-    //                                    .source(
-    //                                        .src("https://www.leonte.dev/\(item.videoFile)"),
-    //                                        .attribute(named: "type", value: "video/mp4")
-    //                                    ),
-    //                                    .attribute(named: "autoplay"),
-    //                                    .attribute(named: "loop"),
-    //                                    .attribute(named: "muted"),
-    //                                    //.attribute(named: "controls"),
-    //                                    .attribute(named: "playsinline")
-    //                                )
-    //                            )
-    //
-    //                            //.img(.src("/\(item.videoFile)"))
-    //                        )
-    //
-    //                    ),
-    //                    .div(
-    //                        .class("project-column-right"),
-    //                        .div(
-    //                            .class("app-row"),
-    //                            .div(
-    //                                .class("app-column-left"),
-    //                                .img(.id(item.code), .class("app_icon"),.src("/\(item.appIcon)"))
-    //                            ),
-    //                            .div(
-    //                                .class("app-column-right"),
-    //                                .h2(.class("app_name"),.text(item.name)),
-    //                                .h6(.class("app_header"), .text(item.subheader))
-    //                            )
-    //                        ),
-    //                        .div(
-    //                            .class("app_description"),
-    //                            .forEach(item.paragraphs) { paragraph in
-    //                                .p(.text(paragraph))
-    //                            },
-    //                            .h4(.text("My Role")),
-    //                            .p(.text(item.role)),
-    //                            .h4(.text("Technologies")),
-    //                            .ul(.class("tech-list"), .forEach(item.technologies) { tech in
-    //                                .li(
-    //                                    //.class("tag"),
-    //                                    .text(tech)
-    //                                    )
-    //                            }),
-    //
-    //                            // App Store Link
-    //                            .forEach(item.appStore_link) { link in
-    //                                .a(
-    //                                    .img(.class("app_download"),.src("/download.svg")), .href(link)
-    //                                )
-    //                            },
-    //                            .br()
-    //                        )
-    //                    )
-    //                )
-    //            }
-    //        )
-    //    }
-    //
-    //    // Index Page projects list
-    //
-    //    static func indexProjectList<T: Website>(for items: [Project], on site: T) -> Node {
-    //        return .ul(
-    //            .class("ul-project-container"), //compact grid latest item-list
-    //            .forEach(items) { item in
-    //                .li(
-    //                    .class("li-project-item"),
-    //                    .a(
-    //                        .href("/projects#\(item.code)"),
-    //
-    //                        .div(
-    //                            .img(.src(item.appIcon)),
-    //                            .br(),
-    //                            .text(item.name),
-    //                            .p(
-    //                                .class("appSubheader"),
-    //                                .text(item.subheader)
-    //                            )
-    //                        )
-    //                    )
-    //                )
-    //            }
-    //        )
-    //    }
     
     static func tagList<T: Website>(for item: Item<T>, on site: T) -> Node {
         return .ul(.class("tag-list"), .forEach(item.tags) { tag in
