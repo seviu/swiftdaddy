@@ -3,9 +3,9 @@ import Plot
 
 
 extension Theme {
-    static func swiftdaddyTheme(using navigation: Navigation, with projects: Projects) -> Self {
+    static func swiftdaddyTheme(using navigation: Navigation) -> Self {
         Theme(
-            htmlFactory: SwiftdaddyHTMLFactory(navigation: navigation, projects: projects),
+            htmlFactory: SwiftdaddyHTMLFactory(navigation: navigation),
             resourcePaths: [
                 "Theme/styles.css",
                 "Theme/fonts/SourceSansPro-Bold.ttf",
@@ -18,7 +18,6 @@ extension Theme {
 
 private struct SwiftdaddyHTMLFactory<Site: Website>: HTMLFactory {
     let navigation: Navigation
-    let projects: Projects
     
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<Site>) throws -> HTML {

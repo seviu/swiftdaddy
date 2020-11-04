@@ -17,11 +17,6 @@ let navigation = Navigation(
             caption: "Twitter",
             destinationURL: URL(string: "https://twitter.com/seviu")!
         ),
-//        .init(
-//            iconPath: "/social/github.svg",
-//            caption: "See my projects",
-//            destinationURL: URL(string: "https://github.com/seviu")!
-//        ),
         .init(
             iconPath: "/social/linkedin.svg",
             caption: "Profile",
@@ -32,11 +27,5 @@ let navigation = Navigation(
             caption: "Email",
             destinationURL: URL(string: "mailto:vieira+blog@gmail.com")!
         )
-//		,
-//        .init(
-//            iconPath: "/social/CV.svg",
-//            caption: "Read my CV",
-//            destinationURL: URL(string: "/cv_sebastian_vieira.pdf")!
-//        ),
     ]
 )

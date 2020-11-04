@@ -35,7 +35,7 @@ struct Swiftdaddy: Website {
 
 extension Theme where Site == Swiftdaddy {
 	static var SwiftdaddyTheme: Self {
-		.swiftdaddyTheme(using: navigation, with: projects)
+		.swiftdaddyTheme(using: navigation)
 	}
 }
 
