@@ -84,7 +84,6 @@ private struct SwiftdaddyHTMLFactory<Site: Website>: HTMLFactory {
                         .contentBody(index.body)
                     ),
                     .navigationMenu(navigation)
-                    
                 ),
                 .br(),
                 .br(),
@@ -256,20 +255,9 @@ private extension Node where Context == HTML.BodyContext {
                                     .text(context.sections[section].title)
                                 ))
                         }
-                        //                        .li(
-                        //                            //.class(context.site.  page.path == "projects" ? "selected" : ""),
-                        //                            .a(
-                        //                            .href("/projects"),
-                        //                            .text("Projects")
-                        //                        )),
-                        //                        .li(.a(
-                        //                            .href("/#aboutMeAnchor"),
-                        //                            .text("About")
-                        //                            ))
+
                     )
                 )
-                //)
-                
             )
         )
     }
